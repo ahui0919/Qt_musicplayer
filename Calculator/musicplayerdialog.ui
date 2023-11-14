@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>musicplayerDialog</class>
+ <widget class="QDialog" name="musicplayerDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>675</width>
+    <height>470</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#musicplayerDialog{
+	border-image: url(:/image/picture/10.webp);
+}</string>
+  </property>
+  <widget class="QPushButton" name="btn_close">
+   <property name="geometry">
+    <rect>
+     <x>610</x>
+     <y>20</y>
+     <width>51</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>0</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	border-image: transparent;
+	background-color: rgba(255,255,255,0.5);
+	border: 2px solid rgba(0,0,0,0.5);	
+	color: rgba(0,0,0,0.8);
+	border-radius: 25px;
+}
+
+QPushButton:pressed{
+	border-image: transparent;
+	background-color: rgba(255,0,0,0.7);
+	border: 2px solid rgba(0,0,0,0.7);
+	color: rgba(0,0,0,0.9);
+}</string>
+   </property>
+   <property name="text">
+    <string>关闭</string>
+   </property>
+   <property name="autoDefault">
+    <bool>false</bool>
+   </property>
+   <property name="default">
+    <bool>false</bool>
+   </property>
+   <property name="flat">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_play">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>350</y>
+     <width>90</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>0</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	border-image: transparent;
+	background-color: rgba(255,255,255,0.5);
+	border: 2px solid rgba(0,0,0,0.5);	
+	color: rgba(0,0,0,0.8);
+	border-radius: 10px;
+}
+
+QPushButton:pressed{
+	border-image: transparent;
+	background-color: rgba(255,0,0,0.7);
+	border: 2px solid rgba(0,0,0,0.7);
+	color: rgba(0,0,0,0.9);
+}</string>
+   </property>
+   <property name="text">
+    <string>播放</string>
+   </property>
+   <property name="autoDefault">
+    <bool>false</bool>
+   </property>
+   <property name="default">
+    <bool>false</bool>
+   </property>
+   <property name="flat">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_next">
+   <property name="geometry">
+    <rect>
+     <x>460</x>
+     <y>350</y>
+     <width>60</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>0</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	border-image: transparent;
+	background-color: rgba(255,255,255,0.5);
+	border: 2px solid rgba(0,0,0,0.5);	
+	color: rgba(0,0,0,0.8);
+	border-radius: 10px;
+}
+
+QPushButton:pressed{
+	border-image: transparent;
+	background-color: rgba(255,0,0,0.7);
+	border: 2px solid rgba(0,0,0,0.7);
+	color: rgba(0,0,0,0.9);
+}</string>
+   </property>
+   <property name="text">
+    <string>下一首</string>
+   </property>
+   <property name="autoDefault">
+    <bool>false</bool>
+   </property>
+   <property name="default">
+    <bool>false</bool>
+   </property>
+   <property name="flat">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_last">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>350</y>
+     <width>60</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>0</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	border-image: transparent;
+	background-color: rgba(255,255,255,0.5);
+	border: 2px solid rgba(0,0,0,0.5);	
+	color: rgba(0,0,0,0.8);
+	border-radius: 10px;
+}
+
+QPushButton:pressed{
+	border-image: transparent;
+	background-color: rgba(255,0,0,0.7);
+	border: 2px solid rgba(0,0,0,0.7);
+	color: rgba(0,0,0,0.9);
+}</string>
+   </property>
+   <property name="text">
+    <string>上一首</string>
+   </property>
+   <property name="autoDefault">
+    <bool>false</bool>
+   </property>
+   <property name="default">
+    <bool>false</bool>
+   </property>
+   <property name="flat">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_song">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>70</y>
+     <width>51</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>0</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	border-image: transparent;
+	background-color: rgba(255,255,255,0.5);
+	border: 2px solid rgba(0,0,0,0.5);	
+	color: rgba(0,0,0,0.8);
+	border-radius: 25px;
+}
+
+QPushButton:pressed{
+	border-image: transparent;
+	background-color: rgba(255,0,0,0.7);
+	border: 2px solid rgba(0,0,0,0.7);
+	color: rgba(0,0,0,0.9);
+}</string>
+   </property>
+   <property name="text">
+    <string>歌单</string>
+   </property>
+   <property name="autoDefault">
+    <bool>false</bool>
+   </property>
+   <property name="default">
+    <bool>false</bool>
+   </property>
+   <property name="flat">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_module">
+   <property name="geometry">
+    <rect>
+     <x>580</x>
+     <y>410</y>
+     <width>71</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>0</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	border-image: transparent;
+	background-color: rgba(255,255,255,0.5);
+	border: 2px solid rgba(0,0,0,0.5);	
+	color: rgba(0,0,0,0.8);
+	border-radius: 25px;
+}
+
+QPushButton:pressed{
+	border-image: transparent;
+	background-color: rgba(255,0,0,0.7);
+	border: 2px solid rgba(0,0,0,0.7);
+	color: rgba(0,0,0,0.9);
+}</string>
+   </property>
+   <property name="text">
+    <string>播放模式</string>
+   </property>
+   <property name="autoDefault">
+    <bool>false</bool>
+   </property>
+   <property name="default">
+    <bool>false</bool>
+   </property>
+   <property name="flat">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QSlider" name="slider_process">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>301</y>
+     <width>501</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="maximum">
+    <number>100</number>
+   </property>
+   <property name="sliderPosition">
+    <number>0</number>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_quick_last">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>350</y>
+     <width>60</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>0</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	border-image: transparent;
+	background-color: rgba(255,255,255,0.5);
+	border: 2px solid rgba(0,0,0,0.5);	
+	color: rgba(0,0,0,0.8);
+	border-radius: 10px;
+}
+
+QPushButton:pressed{
+	border-image: transparent;
+	background-color: rgba(255,0,0,0.7);
+	border: 2px solid rgba(0,0,0,0.7);
+	color: rgba(0,0,0,0.9);
+}</string>
+   </property>
+   <property name="text">
+    <string>快退10s</string>
+   </property>
+   <property name="autoDefault">
+    <bool>false</bool>
+   </property>
+   <property name="default">
+    <bool>false</bool>
+   </property>
+   <property name="flat">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_quick_next">
+   <property name="geometry">
+    <rect>
+     <x>380</x>
+     <y>350</y>
+     <width>60</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>0</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	border-image: transparent;
+	background-color: rgba(255,255,255,0.5);
+	border: 2px solid rgba(0,0,0,0.5);	
+	color: rgba(0,0,0,0.8);
+	border-radius: 10px;
+}
+
+QPushButton:pressed{
+	border-image: transparent;
+	background-color: rgba(255,0,0,0.7);
+	border: 2px solid rgba(0,0,0,0.7);
+	color: rgba(0,0,0,0.9);
+}</string>
+   </property>
+   <property name="text">
+    <string>快进10s</string>
+   </property>
+   <property name="autoDefault">
+    <bool>false</bool>
+   </property>
+   <property name="default">
+    <bool>false</bool>
+   </property>
+   <property name="flat">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QListWidget" name="listWidget_lrc">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>60</y>
+     <width>491</width>
+     <height>211</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QListWidget{
+	border-image: transparent;
+	background-color: rgba(255,255,255,0.5);
+	border: 2px solid rgba(0,0,0,0.5);	
+	color: rgba(0,0,0,0.8);
+	border-radius: 10px;
+}
+
+QListWidget:pressed{
+	border-image: transparent;
+	background-color: rgba(255,0,0,0.7);
+	border: 2px solid rgba(0,0,0,0.7);
+	color: rgba(0,0,0,0.9);
+}</string>
+   </property>
+   <property name="verticalScrollBarPolicy">
+    <enum>Qt::ScrollBarAlwaysOff</enum>
+   </property>
+   <property name="horizontalScrollBarPolicy">
+    <enum>Qt::ScrollBarAlwaysOff</enum>
+   </property>
+   <property name="sizeAdjustPolicy">
+    <enum>QAbstractScrollArea::AdjustIgnored</enum>
+   </property>
+   <property name="textElideMode">
+    <enum>Qt::ElideMiddle</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_time_pos">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>290</y>
+     <width>41</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(114, 159, 207);</string>
+   </property>
+   <property name="text">
+    <string>10</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_time_length">
+   <property name="geometry">
+    <rect>
+     <x>600</x>
+     <y>290</y>
+     <width>67</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(52, 101, 164);</string>
+   </property>
+   <property name="text">
+    <string>200</string>
+   </property>
+  </widget>
+  <widget class="QSlider" name="slider_sound">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>420</y>
+     <width>101</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="maximum">
+    <number>100</number>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_sound">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>410</y>
+     <width>41</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>0</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	border-image: transparent;
+	background-color: rgba(255,255,255,0.5);
+	border: 2px solid rgba(0,0,0,0.5);	
+	color: rgba(0,0,0,0.8);
+	border-radius: 10px;
+}
+
+QPushButton:pressed{
+	border-image: transparent;
+	background-color: rgba(255,0,0,0.7);
+	border: 2px solid rgba(0,0,0,0.7);
+	color: rgba(0,0,0,0.9);
+}</string>
+   </property>
+   <property name="text">
+    <string>音量</string>
+   </property>
+   <property name="autoDefault">
+    <bool>false</bool>
+   </property>
+   <property name="default">
+    <bool>false</bool>
+   </property>
+   <property name="flat">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_time_sys">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>20</y>
+     <width>221</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(114, 159, 207);</string>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

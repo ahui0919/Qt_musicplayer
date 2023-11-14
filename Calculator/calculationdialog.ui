@@ -1,0 +1,865 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CalculationDialog</class>
+ <widget class="QDialog" name="CalculationDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>544</width>
+    <height>536</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#CalculationDialog{
+	border-image: url(:/image/picture/3.jpg);
+	background-repeat: no-repeat;
+}</string>
+  </property>
+  <widget class="QLineEdit" name="lineEdit">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>40</y>
+     <width>471</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit{
+	border-image: transparent;
+	background-color: rgba(255,255,255,0.5);
+	border: 2px solid rgba(0,0,0,0.5);	
+	color: rgba(0,0,0,0.8);
+	border-radius: 25px;
+}
+
+QLineEdit:pressed{
+	border-image: transparent;
+	background-color: rgba(255,0,0,0.7);
+	border: 2px solid rgba(0,0,0,0.7);
+	color: rgba(0,0,0,0.9);
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+   <property name="readOnly">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>120</y>
+     <width>471</width>
+     <height>401</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>60</width>
+     <height>60</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string>QPushButton{
+	border-image: transparent;
+	background-color: rgba(255,255,255,0.5);
+	border: 2px solid rgba(0,0,0,0.5);	
+	color: rgba(0,0,0,0.8);
+	border-radius: 25px;
+}
+
+QPushButton:pressed{
+	border-image: transparent;
+	background-color: rgba(255,0,0,0.7);
+	border: 2px solid rgba(0,0,0,0.7);
+	color: rgba(0,0,0,0.9);
+}</string>
+   </property>
+   <layout class="QGridLayout" name="gridLayout_3">
+    <property name="sizeConstraint">
+     <enum>QLayout::SetDefaultConstraint</enum>
+    </property>
+    <item row="7" column="0">
+     <widget class="QPushButton" name="btn_0">
+      <property name="minimumSize">
+       <size>
+        <width>60</width>
+        <height>60</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+        <weight>75</weight>
+        <italic>false</italic>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	border-image: transparent;
+	background-color: rgba(255,255,255,0.5);
+	border: 2px solid rgba(0,0,0,0.5);	
+	color: rgba(0,0,0,0.8);
+	border-radius: 25px;
+}
+
+QPushButton:pressed{
+	border-image: transparent;
+	background-color: rgba(255,0,0,0.7);
+	border: 2px solid rgba(0,0,0,0.7);
+	color: rgba(0,0,0,0.9);
+}</string>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">buttonGroup</string>
+      </attribute>
+     </widget>
+    </item>
+    <item row="7" column="1">
+     <widget class="QPushButton" name="btn_dot">
+      <property name="minimumSize">
+       <size>
+        <width>60</width>
+        <height>60</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+        <weight>75</weight>
+        <italic>false</italic>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	border-image: transparent;
+	background-color: rgba(255,255,255,0.5);
+	border: 2px solid rgba(0,0,0,0.5);	
+	color: rgba(0,0,0,0.8);
+	border-radius: 25px;
+}
+
+QPushButton:pressed{
+	border-image: transparent;
+	background-color: rgba(255,0,0,0.7);
+	border: 2px solid rgba(0,0,0,0.7);
+	color: rgba(0,0,0,0.9);
+}</string>
+      </property>
+      <property name="text">
+       <string>.</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">buttonGroup</string>
+      </attribute>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QPushButton" name="btn_clear">
+      <property name="minimumSize">
+       <size>
+        <width>60</width>
+        <height>60</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+        <weight>75</weight>
+        <italic>false</italic>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	border-image: transparent;
+	background-color: rgba(255,255,255,0.5);
+	border: 2px solid rgba(0,0,0,0.5);	
+	color: rgba(0,0,0,0.8);
+	border-radius: 25px;
+}
+
+QPushButton:pressed{
+	border-image: transparent;
+	background-color: rgba(255,0,0,0.7);
+	border: 2px solid rgba(0,0,0,0.7);
+	color: rgba(0,0,0,0.9);
+}</string>
+      </property>
+      <property name="text">
+       <string>Clear</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">buttonGroup</string>
+      </attribute>
+     </widget>
+    </item>
+    <item row="7" column="2">
+     <widget class="QPushButton" name="btn_seq">
+      <property name="minimumSize">
+       <size>
+        <width>60</width>
+        <height>60</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+        <weight>75</weight>
+        <italic>false</italic>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	border-image: transparent;
+	background-color: rgba(255,255,255,0.5);
+	border: 2px solid rgba(0,0,0,0.5);	
+	color: rgba(0,0,0,0.8);
+	border-radius: 25px;
+}
+
+QPushButton:pressed{
+	border-image: transparent;
+	background-color: rgba(255,0,0,0.7);
+	border: 2px solid rgba(0,0,0,0.7);
+	color: rgba(0,0,0,0.9);
+}</string>
+      </property>
+      <property name="text">
+       <string>=</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">buttonGroup</string>
+      </attribute>
+     </widget>
+    </item>
+    <item row="6" column="1">
+     <widget class="QPushButton" name="btn_2">
+      <property name="minimumSize">
+       <size>
+        <width>60</width>
+        <height>60</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+        <weight>75</weight>
+        <italic>false</italic>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	border-image: transparent;
+	background-color: rgba(255,255,255,0.5);
+	border: 2px solid rgba(0,0,0,0.5);	
+	color: rgba(0,0,0,0.8);
+	border-radius: 25px;
+}
+
+QPushButton:pressed{
+	border-image: transparent;
+	background-color: rgba(255,0,0,0.7);
+	border: 2px solid rgba(0,0,0,0.7);
+	color: rgba(0,0,0,0.9);
+}</string>
+      </property>
+      <property name="text">
+       <string>2</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">buttonGroup</string>
+      </attribute>
+     </widget>
+    </item>
+    <item row="6" column="0">
+     <widget class="QPushButton" name="btn_1">
+      <property name="minimumSize">
+       <size>
+        <width>60</width>
+        <height>60</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+        <weight>75</weight>
+        <italic>false</italic>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	border-image: transparent;
+	background-color: rgba(255,255,255,0.5);
+	border: 2px solid rgba(0,0,0,0.5);	
+	color: rgba(0,0,0,0.8);
+	border-radius: 25px;
+}
+
+QPushButton:pressed{
+	border-image: transparent;
+	background-color: rgba(255,0,0,0.7);
+	border: 2px solid rgba(0,0,0,0.7);
+	color: rgba(0,0,0,0.9);
+}</string>
+      </property>
+      <property name="text">
+       <string>1</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">buttonGroup</string>
+      </attribute>
+     </widget>
+    </item>
+    <item row="6" column="2">
+     <widget class="QPushButton" name="btn_3">
+      <property name="minimumSize">
+       <size>
+        <width>60</width>
+        <height>60</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+        <weight>75</weight>
+        <italic>false</italic>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	border-image: transparent;
+	background-color: rgba(255,255,255,0.5);
+	border: 2px solid rgba(0,0,0,0.5);	
+	color: rgba(0,0,0,0.8);
+	border-radius: 25px;
+}
+
+QPushButton:pressed{
+	border-image: transparent;
+	background-color: rgba(255,0,0,0.7);
+	border: 2px solid rgba(0,0,0,0.7);
+	color: rgba(0,0,0,0.9);
+}</string>
+      </property>
+      <property name="text">
+       <string>3</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">buttonGroup</string>
+      </attribute>
+     </widget>
+    </item>
+    <item row="5" column="2">
+     <widget class="QPushButton" name="btn_6">
+      <property name="minimumSize">
+       <size>
+        <width>60</width>
+        <height>60</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+        <weight>75</weight>
+        <italic>false</italic>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	border-image: transparent;
+	background-color: rgba(255,255,255,0.5);
+	border: 2px solid rgba(0,0,0,0.5);	
+	color: rgba(0,0,0,0.8);
+	border-radius: 25px;
+}
+
+QPushButton:pressed{
+	border-image: transparent;
+	background-color: rgba(255,0,0,0.7);
+	border: 2px solid rgba(0,0,0,0.7);
+	color: rgba(0,0,0,0.9);
+}</string>
+      </property>
+      <property name="text">
+       <string>6</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">buttonGroup</string>
+      </attribute>
+     </widget>
+    </item>
+    <item row="5" column="1">
+     <widget class="QPushButton" name="btn_5">
+      <property name="minimumSize">
+       <size>
+        <width>60</width>
+        <height>60</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+        <weight>75</weight>
+        <italic>false</italic>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	border-image: transparent;
+	background-color: rgba(255,255,255,0.5);
+	border: 2px solid rgba(0,0,0,0.5);	
+	color: rgba(0,0,0,0.8);
+	border-radius: 25px;
+}
+
+QPushButton:pressed{
+	border-image: transparent;
+	background-color: rgba(255,0,0,0.7);
+	border: 2px solid rgba(0,0,0,0.7);
+	color: rgba(0,0,0,0.9);
+}</string>
+      </property>
+      <property name="text">
+       <string>5</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">buttonGroup</string>
+      </attribute>
+     </widget>
+    </item>
+    <item row="5" column="0">
+     <widget class="QPushButton" name="btn_4">
+      <property name="minimumSize">
+       <size>
+        <width>60</width>
+        <height>60</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+        <weight>75</weight>
+        <italic>false</italic>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	border-image: transparent;
+	background-color: rgba(255,255,255,0.5);
+	border: 2px solid rgba(0,0,0,0.5);	
+	color: rgba(0,0,0,0.8);
+	border-radius: 25px;
+}
+
+QPushButton:pressed{
+	border-image: transparent;
+	background-color: rgba(255,0,0,0.7);
+	border: 2px solid rgba(0,0,0,0.7);
+	color: rgba(0,0,0,0.9);
+}</string>
+      </property>
+      <property name="text">
+       <string>4</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">buttonGroup</string>
+      </attribute>
+     </widget>
+    </item>
+    <item row="3" column="0">
+     <widget class="QPushButton" name="btn_7">
+      <property name="minimumSize">
+       <size>
+        <width>60</width>
+        <height>60</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+        <weight>75</weight>
+        <italic>false</italic>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	border-image: transparent;
+	background-color: rgba(255,255,255,0.5);
+	border: 2px solid rgba(0,0,0,0.5);	
+	color: rgba(0,0,0,0.8);
+	border-radius: 25px;
+}
+
+QPushButton:pressed{
+	border-image: transparent;
+	background-color: rgba(255,0,0,0.7);
+	border: 2px solid rgba(0,0,0,0.7);
+	color: rgba(0,0,0,0.9);
+}</string>
+      </property>
+      <property name="text">
+       <string>7</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">buttonGroup</string>
+      </attribute>
+     </widget>
+    </item>
+    <item row="3" column="1">
+     <widget class="QPushButton" name="btn_8">
+      <property name="minimumSize">
+       <size>
+        <width>60</width>
+        <height>60</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+        <weight>75</weight>
+        <italic>false</italic>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	border-image: transparent;
+	background-color: rgba(255,255,255,0.5);
+	border: 2px solid rgba(0,0,0,0.5);	
+	color: rgba(0,0,0,0.8);
+	border-radius: 25px;
+}
+
+QPushButton:pressed{
+	border-image: transparent;
+	background-color: rgba(255,0,0,0.7);
+	border: 2px solid rgba(0,0,0,0.7);
+	color: rgba(0,0,0,0.9);
+}</string>
+      </property>
+      <property name="text">
+       <string>8</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">buttonGroup</string>
+      </attribute>
+     </widget>
+    </item>
+    <item row="3" column="2">
+     <widget class="QPushButton" name="btn_9">
+      <property name="minimumSize">
+       <size>
+        <width>60</width>
+        <height>60</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+        <weight>75</weight>
+        <italic>false</italic>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	border-image: transparent;
+	background-color: rgba(255,255,255,0.5);
+	border: 2px solid rgba(0,0,0,0.5);	
+	color: rgba(0,0,0,0.8);
+	border-radius: 25px;
+}
+
+QPushButton:pressed{
+	border-image: transparent;
+	background-color: rgba(255,0,0,0.7);
+	border: 2px solid rgba(0,0,0,0.7);
+	color: rgba(0,0,0,0.9);
+}</string>
+      </property>
+      <property name="text">
+       <string>9</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">buttonGroup</string>
+      </attribute>
+     </widget>
+    </item>
+    <item row="3" column="3">
+     <widget class="QPushButton" name="btn_sub">
+      <property name="minimumSize">
+       <size>
+        <width>60</width>
+        <height>60</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+        <weight>75</weight>
+        <italic>false</italic>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	border-image: transparent;
+	background-color: rgba(255,255,255,0.5);
+	border: 2px solid rgba(0,0,0,0.5);	
+	color: rgba(0,0,0,0.8);
+	border-radius: 25px;
+}
+
+QPushButton:pressed{
+	border-image: transparent;
+	background-color: rgba(255,0,0,0.7);
+	border: 2px solid rgba(0,0,0,0.7);
+	color: rgba(0,0,0,0.9);
+}</string>
+      </property>
+      <property name="text">
+       <string>-</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">buttonGroup</string>
+      </attribute>
+     </widget>
+    </item>
+    <item row="5" column="3">
+     <widget class="QPushButton" name="btn_add">
+      <property name="minimumSize">
+       <size>
+        <width>60</width>
+        <height>60</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+        <weight>75</weight>
+        <italic>false</italic>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	border-image: transparent;
+	background-color: rgba(255,255,255,0.5);
+	border: 2px solid rgba(0,0,0,0.5);	
+	color: rgba(0,0,0,0.8);
+	border-radius: 25px;
+}
+
+QPushButton:pressed{
+	border-image: transparent;
+	background-color: rgba(255,0,0,0.7);
+	border: 2px solid rgba(0,0,0,0.7);
+	color: rgba(0,0,0,0.9);
+}</string>
+      </property>
+      <property name="text">
+       <string>+</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">buttonGroup</string>
+      </attribute>
+     </widget>
+    </item>
+    <item row="6" column="3">
+     <widget class="QPushButton" name="btn_mul">
+      <property name="minimumSize">
+       <size>
+        <width>60</width>
+        <height>60</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+        <weight>75</weight>
+        <italic>false</italic>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	border-image: transparent;
+	background-color: rgba(255,255,255,0.5);
+	border: 2px solid rgba(0,0,0,0.5);	
+	color: rgba(0,0,0,0.8);
+	border-radius: 25px;
+}
+
+QPushButton:pressed{
+	border-image: transparent;
+	background-color: rgba(255,0,0,0.7);
+	border: 2px solid rgba(0,0,0,0.7);
+	color: rgba(0,0,0,0.9);
+}</string>
+      </property>
+      <property name="text">
+       <string>*</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">buttonGroup</string>
+      </attribute>
+     </widget>
+    </item>
+    <item row="7" column="3">
+     <widget class="QPushButton" name="btn_div">
+      <property name="minimumSize">
+       <size>
+        <width>60</width>
+        <height>60</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+        <weight>75</weight>
+        <italic>false</italic>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	border-image: transparent;
+	background-color: rgba(255,255,255,0.5);
+	border: 2px solid rgba(0,0,0,0.5);	
+	color: rgba(0,0,0,0.8);
+	border-radius: 25px;
+}
+
+QPushButton:pressed{
+	border-image: transparent;
+	background-color: rgba(255,0,0,0.7);
+	border: 2px solid rgba(0,0,0,0.7);
+	color: rgba(0,0,0,0.9);
+}</string>
+      </property>
+      <property name="text">
+       <string>/</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">buttonGroup</string>
+      </attribute>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QPushButton" name="btn_del">
+      <property name="minimumSize">
+       <size>
+        <width>60</width>
+        <height>60</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+        <weight>75</weight>
+        <italic>false</italic>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	border-image: transparent;
+	background-color: rgba(255,255,255,0.5);
+	border: 2px solid rgba(0,0,0,0.5);	
+	color: rgba(0,0,0,0.8);
+	border-radius: 25px;
+}
+
+QPushButton:pressed{
+	border-image: transparent;
+	background-color: rgba(255,0,0,0.7);
+	border: 2px solid rgba(0,0,0,0.7);
+	color: rgba(0,0,0,0.9);
+}</string>
+      </property>
+      <property name="text">
+       <string>&lt;-</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">buttonGroup</string>
+      </attribute>
+     </widget>
+    </item>
+    <item row="0" column="3">
+     <widget class="QPushButton" name="btn_close">
+      <property name="minimumSize">
+       <size>
+        <width>60</width>
+        <height>60</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+        <weight>75</weight>
+        <italic>false</italic>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	border-image: transparent;
+	background-color: rgba(255,255,255,0.5);
+	border: 2px solid rgba(0,0,0,0.5);	
+	color: rgba(0,0,0,0.8);
+	border-radius: 25px;
+}
+
+QPushButton:pressed{
+	border-image: transparent;
+	background-color: rgba(255,0,0,0.7);
+	border: 2px solid rgba(0,0,0,0.7);
+	color: rgba(0,0,0,0.9);
+}</string>
+      </property>
+      <property name="text">
+       <string>close</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">buttonGroup</string>
+      </attribute>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+ <buttongroups>
+  <buttongroup name="buttonGroup"/>
+ </buttongroups>
+</ui>
